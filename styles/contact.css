@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    min-height: 100vh;
+    background-image: url("../images/logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+  }
+  body::before {
+    content: "";
+    position: absolute;
+    top: -150px;
+    left: -90px;
+    height: 300px;
+    width: 300px;
+    background-color: bisque;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  body::after {
+    content: "";
+    position: absolute;
+    right: -90px;
+    bottom: -50px;
+    height: 300px;
+    width: 300px;
+    background-color: bisque;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  .homePage{
+      background-color: transparent;
+      padding: 0 10px;
+      transition: .3s ease-in-out;
+    }
+    .homePage nav{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .homePage nav .logo img{
+      height: 100px;
+    }
+    .homePage nav ul{
+      display: flex;
+      gap: 20px;
+    }
+    .homePage nav ul li{
+      list-style: none;
+      transition: .1s;
+    }
+    .homePage nav ul li.active{
+      border-bottom:3px solid orange;
+    }
+    .homePage nav ul li img{
+      height: 50px;
+    }
+    .homePage nav ul li:hover{
+      border-bottom: 3px solid orange;
+    }
+    .homePage nav .search{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 5px;
+      height: 30px;
+      width: 20%;
+    }
+    .homePage nav .search input{
+      height: 100%;
+      width: 100%;
+      padding-left: 10px;
+      border: 3px solid bisque;
+    }
+    .homePage nav .search button{
+      width: 50px;
+      height: 100%;
+      border: 1px solid transparent;
+    }
+    .homePage nav .search button img{
+      height: 20px;
+    }
+    .menu{
+      display: flex;
+      align-items: center;
+    }
+    .menu h2{
+      width: 100%;
+      text-align: center;
+    }
+    .menu h2 span{
+      color: rgb(255, 157, 0);
+    }
+    .cont{
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      height: calc(100vh - 140px);
+    }
+    .left{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+      width: 50%;
+      background-color: rgba(0,0,0,0.01);
+      backdrop-filter: blur(2px);
+    }
+    .left .first{
+      border-radius: 20px 0 20px 0;
+      border: 3px solid #111;
+      display: flex;
+      height: 70%;
+      padding: 10px 40px;
+      align-items: center;
+      flex-direction: column;
+      overflow: auto;
+    }
+    .left > div img{
+      height: 100px;
+      width: 100px;
+    }
+    .left .second{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      height: 30%;
+    }
+    .left .second > div{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .left .second div div{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .left .second div img{
+      height: 40px;
+      width: 40px;
+    }
+    .right{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      padding-top: 8%;
+      background-color: rgba(0,0,0,0.01);
+      backdrop-filter: blur(2px);
+    }
+    .right input{
+      height: 50px;
+      width: 100%;
+      border-radius: 10px;
+      padding-left: 10px;
+    }
+    .right button{
+      background-color: orange;
+      padding: 10px 40px;
+      border-radius: 10px;
+    }
+
+    .come h1{
+      color: #060606;
+      font-size: 150%;
+      position: relative;
+      top: 360px;
+    }

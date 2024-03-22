@@ -1,0 +1,350 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background-image: url("../images/logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  left: -90px;
+  height: 300px;
+  width: 300px;
+  background-color: bisque;
+  border-radius: 50%;
+  z-index: -1;
+}
+body::after {
+  content: "";
+  position: absolute;
+  right: -90px;
+  bottom: -50px;
+  height: 300px;
+  width: 300px;
+  background-color: bisque;
+  border-radius: 50%;
+  z-index: -1;
+}
+.loginPage {
+  position: absolute;
+  top: 5px;
+  left: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 500px;
+  height: 500px;
+  padding: 20px 50px 20px 50px;
+  border: 2px solid bisque;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.03);
+  backdrop-filter: blur(10px);
+  /* display: none; */
+}
+.loginPage div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.loginPage h3 {
+  text-align: center;
+}
+.loginPage div .emailContainer,
+.loginPage div .passContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+  height: 40px;
+  width: 100%;
+  background-color: #fff;
+  border: 3px solid bisque;
+}
+.loginPage div .emailContainer img,
+.loginPage div .passContainer img {
+  height: 30px;
+  width: 30px;
+}
+.loginPage div .passContainer img {
+  padding-left: 5px;
+}
+.loginPage div .emailContainer input,
+.loginPage div .passContainer input {
+  height: 100%;
+  width: 100%;
+  border: 1px solid transparent;
+  outline: none;
+}
+.loginPage .socials {
+  width: 200px;
+  margin: 0 auto;
+}
+.loginPage .socials ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.loginPage .socials ul li {
+  list-style: none;
+}
+.loginPage .socials ul li a img {
+  height: 40px;
+  width: 40px;
+}
+.loginPage button {
+  background-color: #111;
+  color: #fff;
+  width: 200px;
+  height: 50px;
+  border-radius: 0 20px 0 20px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.loginPage button:hover {
+  background-color: #fff;
+  color: #111;
+  border: 3px solid bisque;
+}
+.loginPage.active {
+  display: none;
+}
+.intro.active {
+  transform: translateY(0);
+}
+
+/* intro-page styling */
+.intro {
+  width: 900px;
+  height: 500px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto;
+  transform: translateY(1000px);
+  transition: 0.3s ease-in-out;
+}
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 900px;
+  height: 500px;
+  padding: 20px;
+  border: 3px solid bisque;
+  background-color: rgba(0, 0, 0, 0.01);
+  background-color: #fff;
+  backdrop-filter: blur(2px);
+  border-radius: 40px 0 40px 0;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+.intro .intro-container div img {
+  height: 200px;
+}
+.intro p {
+  height: 100%;
+  line-height: 30px;
+  word-spacing: 5px;
+  text-align: center;
+}
+.intro .counter {
+  display: flex;
+  flex-direction: column;
+}
+.intro .counter button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transform: translateY(-50px);
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+.intro .counter button.active {
+  transform: translateY(0);
+  z-index: 1;
+}
+.intro .counter button img {
+  height: 20px;
+}
+.intro .counter .count {
+  font-size: 20px;
+}
+
+/* HOME PAGE STYLING */
+.homePage{
+  position: absolute;
+  top: -50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  padding: 0 10px;
+  transition: .3s ease-in-out;
+  transform: translateY(1000px);
+  z-index: 100;
+}
+.homePage nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.homePage nav .logo img{
+  height: 100px;
+}
+.homePage nav ul{
+  display: flex;
+  gap: 20px;
+}
+.homePage nav ul li{
+  list-style: none;
+  transition: .1s ease;
+}
+.homePage nav ul li:hover{
+  border-bottom: 3px solid orange;
+}
+.homePage nav ul li img{
+  height: 50px;
+}
+.homePage nav .search{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  height: 30px;
+  width: 20%;
+}
+.homePage nav ul li.active{
+  border-bottom:3px solid orange;
+}
+.homePage nav .search input{
+  height: 100%;
+  width: 100%;
+  padding-left: 10px;
+  border: 3px solid bisque;
+}
+.homePage nav .search button{
+  width: 50px;
+  height: 100%;
+  border: 1px solid transparent;
+}
+.homePage nav .search button img{
+  height: 20px;
+}
+.homePage.active{
+  transition:  .3s ease-in-out;
+  transform: translateY(0);
+}
+
+/* Menu section style */
+.menu{
+  position: relative;
+}
+.menu .menuOpt{
+  position: absolute;
+  top: -10px;
+  padding-bottom: 10px;
+  background-color: orange;
+  z-index: 2;
+  display: none;
+}
+.menu .menuOpt ul{
+  display: flex;
+  flex-direction: column;
+}
+.menu .menuOpt ul li{
+  list-style: none;
+  padding: 10px 10px;
+}
+.menu .menuOpt ul li:hover{
+  background-color: rgb(173, 113, 1);
+}
+.menu .menuOpt ul img{
+  height: 10px;
+}
+.menuOpt.active{
+  display: block;
+}
+
+/* blocks section */
+.blocks{
+  display: flex;
+  gap: 10px;
+  height: calc(100vh - 150px);
+}
+.infoBlocks{
+  flex: 50%;
+  display: flex;
+  align-items: flex-end;
+}
+.infoBlocks > div{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 500px;
+  padding: 10px;
+  border: 2px solid bisque;
+  border-radius: 20px 0 20px 0;
+  background-color: #fff;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+.infoBlocks > div img{
+  position: absolute;
+  top: -100px;
+  right: -440px;
+  height: 250px;
+  width: 450px;
+  border-radius: 20px;
+  border: 2px solid #111;
+  box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.3);
+}
+.infoBlocks > div p{
+  line-height: 20px;
+  text-align: center;
+}
+.infoBlocks div .infoBtns{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+}
+.infoBlocks div .infoBtns button{
+  height: 100%;
+  padding: 0 30px;
+  background-color: orange;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.arrBtns{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 10px;
+  flex: 20%;
+}
+.arrBtns button{
+  background-color: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.picBlock{
+  flex: 40%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.picBlock img{
+  height: 200px;
+  width: 400px;
+  border-radius: 20px;
+}
